@@ -55,8 +55,8 @@ public class PassportClientController {
         return this.passportService.findReplaceable();
     }
 
-    @GetMapping("/findBySeries")
-    public List<Passport> findBySeries(String series) {
+    @GetMapping("/find?{series}")
+    public List<Passport> findBySeries(@PathVariable String series) {
         return this.passportService.findBySeries(series);
     }
 
